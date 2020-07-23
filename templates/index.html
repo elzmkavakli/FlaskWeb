@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron text-center">
+<h3>Python ile Web Sayfası Geliştirme</h3>
+<p>Yeni Sisteme Hazırız....</p>
+</div>
+<p>Öğretmen Kadromuz</p>
+<hr>
+<ul>
+    {% for ogretmen in ogretmen %}
+        <li> {{ogretmen.adi}}/{{ogretmen.gorevi}}</li>
+    {% endfor %}
+</ul>
+{% if answer==1 %}
+<p>2020-2021 Eğitim Öğretim Yılında Yeni Müfredata Hazırız</p>
+{% else %}
+<p> 2021-2022 Eğitim Öğretim Yılından İtibaren Aşağıdaki Dallar değişiyor</p>
+<hr>
+<p>1-Bilgisayar Teknik Servis Dalı</p>
+<p>2-Ağ İşletmenliği ve siber Güvenlik Dalı</p>
+<p>3-Veritabanı Prpgramcılığı Dalı</p>
+<p>4-Web Programcılığı Dalı</p>
+{% endif %}
+{% endblock  %}
